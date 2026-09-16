@@ -65,9 +65,3 @@ The source was reviewed for:
 Logic checks confirm that the result routine advances through every result element and that vectors cannot exceed the reserved 32-element capacity.
 
 No MARS or SPIM executable was provided with the source, so simulator assembly and runtime behavior still need to be verified locally.
-
-## Suggested Commit Message
-
-```text
-fix: correct MIPS vector processing and input validation
-```
