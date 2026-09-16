@@ -23,18 +23,6 @@ mips-vector-operations/
 
 Each vector reserves 128 bytes, which is enough for 32 32-bit integers.
 
-## Important Corrections
-
-The original source printed the first result element repeatedly because the result pointer was never advanced inside the print loop. The corrected implementation advances the pointer by four bytes after each printed integer.
-
-The original source also accepted vector sizes outside the allocated range and could execute multiplication for unsupported operation values. The corrected version validates the operation and vector size before processing.
-
-## Arithmetic Behavior
-
-Addition uses `addu`, and multiplication stores the low 32 bits produced by `mult`/`mflo`.
-
-Therefore, results follow 32-bit two's-complement behavior if a mathematical result exceeds the signed 32-bit range.
-
 ## Running
 
 This repository does not include a MIPS simulator.
